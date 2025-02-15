@@ -1,7 +1,7 @@
-import importlib_metadata
+from importlib.metadata import version
 
 import inferax
 
 
 def test_version():
-    assert importlib_metadata.version('inferax') == inferax.__version__
+    assert version('inferax') == inferax.__version__
