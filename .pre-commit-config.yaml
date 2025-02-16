@@ -8,14 +8,14 @@ repos:
       - id: check-yaml
         args:
           - --unsafe
-      - id: end-of-file-fixer  # binary files should be skipped
-      - id: mixed-line-ending  # binary files should be skipped
+      - id: end-of-file-fixer  # binary files should be excluded
+      - id: mixed-line-ending  # binary files should be excluded
         args:
           - --fix=lf
       - id: name-tests-test
         args:
-          - -pytest-test-first
-      - id: trailing-whitespace  # binary files should be skipped
+          - --pytest-test-first
+      - id: trailing-whitespace  # binary files should be excluded
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: "v0.9.6"
