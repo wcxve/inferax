@@ -40,7 +40,8 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: wcxve/inferax
+          fail_ci_if_error: true
+          verbose: true
 
   build:
     runs-on: ubuntu-latest
